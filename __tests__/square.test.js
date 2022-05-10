@@ -14,5 +14,10 @@ describe('Square', () => {
   test('Should correctly determine whether 4 lengths are not a square', () => {
     const notSquare = new Square(3, 2, 5, 3); 
     expect(notSquare.checkType()).toEqual("not a square"); 
+  });
+  
+  test('Should correctly determine whether four lengths make a square', () => {
+    const mySquare = new Square(2, 2, 2, 2)
+    expect(mySquare.checkType()).toEqual("this is a square"); 
   }); 
 }); 

@@ -6,5 +6,9 @@ export default function Square (side1, side2, side3, side4) {
 }
 
 Square.prototype.checkType = function() {
-  return "not a square"; 
-}
+  if ((this.side1 === this.side2) && (this.side1 === this.side3) && (this.side1 === this.side4)) {
+    return "this is a square"; 
+  } else {
+    return "not a square"; 
+  }
+}; 
