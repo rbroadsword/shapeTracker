@@ -10,4 +10,9 @@ describe('Square', () => {
     expect(square.side3).toEqual(2); 
     expect(square.side4).toEqual(2); 
   }); 
+
+  test('Should correctly determine whether 4 lengths are not a square', () => {
+    const notSquare = new Square(3, 2, 5, 3); 
+    expect(notSquare.checkType()).toEqual("not a square"); 
+  }); 
 }); 
