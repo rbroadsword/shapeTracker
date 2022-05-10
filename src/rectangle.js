@@ -6,5 +6,9 @@ export default function Rectangle(side1, side2, side3, side4) {
 }
 
 Rectangle.prototype.checkType = function() {
-  return "not a rectangle"; 
+  if ((this.side1 === this.side3) && (this.side2 === this.side4)) {
+    return "this is a rectangle"; 
+  } else {
+    return "this is not a rectangle"; 
+  }
 }; 

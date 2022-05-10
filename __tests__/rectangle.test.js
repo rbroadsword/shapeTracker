@@ -12,6 +12,11 @@ describe('Rectangle', () => {
 
   test('should correctly determine whether 2 lengths and 2 heights', () => {
     const notRectangle = new Rectangle(2, 3, 4, 5); 
-    expect(notRectangle.checkType()).toEqual("not a rectangle"); 
+    expect(notRectangle.checkType()).toEqual("this is not a rectangle"); 
+  }); 
+
+  test('should correctly determine whether 2 lengths and 2 widths make a rectangle', () => {
+    const myRectangle = new Rectangle(2, 4, 2, 4); 
+    expect(myRectangle.checkType()).toEqual("this is a rectangle"); 
   }); 
 }); 
