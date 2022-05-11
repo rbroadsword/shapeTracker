@@ -7,6 +7,10 @@ export default class Square {
   getArea() {
 return this.side1 * this.side2; 
   }
+
+  getPerimeter() {
+    return this.side1 *4; 
+  }
   // checkType() {
   //   if ((this.side1 === this.side2) && (this.side1 === this.side3) && (this.side1 === this.side4)) {
   //     return "this is a square"; 

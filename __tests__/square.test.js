@@ -12,7 +12,13 @@ describe('Square', () => {
   test('should correctly get the area of a square object', () => {
     const square = new Square(5, 5); 
     expect(square.getArea()).toEqual(25); 
+  }); 
+
+  test('should correctly get the perimeter of a square objesct', () => {
+    const square = new Square(5, 5); 
+    expect(square.getPerimeter()).toEqual(20); 
   })
+
   // test('Should correctly determine whether 4 lengths are not a square', () => {
   //   const notSquare = new Square(3, 2, 5, 3); 
   //   expect(notSquare.checkType()).toEqual("not a square"); 
