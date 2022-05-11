@@ -1,4 +1,4 @@
-import Square from './../src/square.js'; 
+import Square from '../src/js/square.js'; 
 
 
 describe('Square', () => {
