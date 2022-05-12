@@ -6,5 +6,8 @@ describe("Circle", () => {
     expect(circle.radius).toEqual(5);
   });
 
-  test("");
+  test("should correctly determine the area of the circle object", () => {
+    const circle = new Circle(3);
+    expect(circle.getArea()).toEqual(28.274333882308138);
+  });
 });

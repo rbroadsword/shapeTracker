@@ -3,7 +3,7 @@ export default class Circle {
     this.radius = radius;
   }
 
-  geArea() {
+  getArea() {
     return Math.PI * this.radius * this.radius;
   }
 }

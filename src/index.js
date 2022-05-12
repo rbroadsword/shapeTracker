@@ -5,8 +5,10 @@ import "./css/styles.css";
 import Triangle from "./js/triangle.js";
 import Square from "./js/square.js";
 import Rectangle from "./js/rectangle.js";
-$(document).ready(function () {
-  $("#triangle-checker-form").on(function (event) {
+import Circle from "./js/circle.js";
+
+$(function () {
+  $("#triangle-checker-form").on("submit", function (event) {
     event.preventDefault();
     const length1 = $("#length1").val();
     const length2 = $("#length2").val();
@@ -16,21 +18,20 @@ $(document).ready(function () {
     $("#response").append("<p>" + response + "</p>");
   });
 
-  $("#rectangle-area-form").submit(function (event) {
-    event.preventDefault();
-    const length1 = parseInt($("#rect-length1").val());
-    const length2 = parseInt($("#rect-length2").val());
-    const rectangle = new Rectangle(length1, length2);
-    const response = rectangle.getArea();
-    $("#response2").append(`<p> The area of the rectangle is ${response}.</p>`);
-  });
+  // $("#rectangle-area-form").on("submit", function (event) {
+  //   event.preventDefault();
+  //   const length1 = parseInt($("#rect-length1").val());
+  //   const length2 = parseInt($("#rect-length2").val());
+  //   const rectangle = new Rectangle(length1, length2);
+  //   const response = rectangle.getArea();
+  //   $("#response2").append(`<p> The area of the rectangle is ${response}.</p>`);
+  // });
 
-  $("#square-area-form").submit(function (event) {
+  $("#circle-area-form").on("submit", function (event) {
     event.preventDefault();
-    const length1 = parseInt($("#sq-length1").val());
-    const length2 = parseInt($("#sq-length2").val());
-    const square = new Square(length1, length2);
-    const response = square.getArea();
-    $("#response2").append(`<p> The area of the square is ${response}.</p>`);
+    const radius = parseInt($("#radius").val());
+    const circle = new Circle(radius);
+    const response = circle.getArea();
+    $("#response4").append(`<p> The area of the circle is ${response}.</p>`);
   });
 });
